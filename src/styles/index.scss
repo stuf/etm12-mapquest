@@ -1,6 +1,19 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-UI-Regular.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-UI-Bold.otf');
+  font-weight: bold;
+}
+
 html,
 body {
   height: 100%;
+  font-family: 'Inter';
 }
 
 #root {
@@ -29,4 +42,14 @@ fieldset {
     margin: 0;
     font-size: 0.9rem;
   }
+}
+
+.position {
+  display: grid;
+  height: 100%;
+  border: dashed 4px #f00;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 8vh;
 }

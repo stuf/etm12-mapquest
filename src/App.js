@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'karet';
+import * as U from 'karet.util';
+import * as K from 'kefir';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import { watchCurrentPosition } from './core/location';
+
+const App = () => {
+  const pos = watchCurrentPosition().toProperty();
+
+  const err = U.thru(
+    pos,
+    U.ignoreValues,
+    U.flatMapErrors(K.constant),
+    U.toProperty,
   );
-}
+
+  err.onValue(e => alert(e));
+
+  return (
+    <main>
+      <fieldset>
+        <legend>Debug</legend>
+
+        <pre>
+          <code>{U.stringify(pos, null, 2)}</code>
+        </pre>
+
+        <pre>
+          <code>{U.stringify(err, null, 2)}</code>
+        </pre>
+      </fieldset>
+    </main>
+  );
+};
 
 export default App;

@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  border: solid 2px #f00;
+}
+
+main {
+  border: solid 2px #00f;
+  height: 100%;
+  position: relative;
+}
+
+fieldset {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px #f00;
+
+  > legend {
+    padding: 0.2rem 0.4rem;
+  }
+
+  pre {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}

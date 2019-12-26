@@ -2,17 +2,6 @@
   "name": "etm12-mapquest",
   "version": "0.1.0",
   "private": true,
-  "installConfig": {
-    "pnp": true
-  },
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -33,5 +22,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "karet": "^4.1.0",
+    "karet.util": "^0.19.1",
+    "kefir": "^3.8.6",
+    "normalize.css": "^8.0.1",
+    "partial.lenses": "^14.17.0",
+    "partial.lenses.validation": "^2.0.0",
+    "ramda": "^0.26.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
+  },
+  "optionalDependencies": {
+    "@types/kefir": "^3.8.2",
+    "@types/ramda": "^0.26.38"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0"
   }
 }

@@ -43,6 +43,6 @@
     "@types/ramda": "^0.26.38"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   }
 }
